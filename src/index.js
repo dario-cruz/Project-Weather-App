@@ -1,15 +1,17 @@
+import {attributeHelper} from '@dariocru/attribute-helper'
+import { getWeatherData } from './helpers/getWeatherData'
+
 // Define elements needed for site. 
 const getWeatherButton = document.createElement('button')
+getWeatherButton.innerText = 'Log the weather!'
 
-getWeatherButton.innerText = 'Log the weather!!'
 
-async function getWeather() {
-    const weatherData = await fetch('https://api.weatherapi.com/v1/current.json?key=46584a9caf1f4b8887b153831231204&q=london', {mode : 'cors'})
-    console.log(weatherData)
-}
+// Define an input element so that the user can input there location and get the weather.
+const locationInput = document.createElement('input')
+
 
 // On click run the get weather function.
-getWeatherButton.addEventListener('click', getWeather)
+getWeatherButton.addEventListener('click', getWeatherData)
 
 // Append the button to the dom for testing.
 document.body.appendChild(getWeatherButton)
