@@ -24,6 +24,7 @@ attributeHelper(weatherForm, {
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     let locationInfo = locationInput.value
+    locationInput.value = ''
     getWeatherData(locationInfo)
 })
 
