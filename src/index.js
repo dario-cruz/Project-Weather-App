@@ -35,4 +35,3 @@ weatherForm.append(locationInput, getWeatherButton)
 document.body.appendChild(weatherForm)
 
 getUserLocation()
-
