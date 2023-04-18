@@ -1,5 +1,6 @@
-import { getWeatherData } from './helpers/getWeatherData'
 import attributeHelper from '@dariocru/attribute-helper'
+import { getWeatherData } from './helpers/getWeatherData'
+import { getUserLocation } from './helpers/getLocation'
 
 // Define elements needed for site. 
 const getWeatherButton = document.createElement('button')
@@ -32,4 +33,6 @@ weatherForm.addEventListener('submit', (e) => {
 // Append the button to the dom for testing.
 weatherForm.append(locationInput, getWeatherButton)
 document.body.appendChild(weatherForm)
+
+getUserLocation()
 
