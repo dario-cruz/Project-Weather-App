@@ -1,13 +1,14 @@
 // Get user location for checking local weather on startup.
-function getUserLocation() {
+
+async function getUserLocation() {
     // Create object to store location data.
     let userLoc = {}
     // Check if the browser supports geolocation
     if ("geolocation" in navigator) {
         // Get the user's location
         navigator.geolocation.getCurrentPosition(function(position) {
-        // The user's location was successfully retrieved
-        userLoc = {
+            // The user's location was successfully retrieved
+            userLoc = {
             latitude : position.coords.latitude,
             longitude : position.coords.longitude
         }
@@ -24,4 +25,6 @@ function getUserLocation() {
     return userLoc
 }
 
-export { getUserLocation }
+
+
+export { getUserLocation, }
