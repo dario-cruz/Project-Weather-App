@@ -1,5 +1,10 @@
 import './index.css'
+import { weatherFormEvent } from './pageComponents/events'
 import { getUserLocation, userLoc } from './helpers/getLocation'
+import { processLocation } from './helpers/processLocation'
+
+getUserLocation()
+
 
 // Define all elements needed. 
 // Text elements. 
@@ -8,8 +13,7 @@ const dateText = document.querySelector('p.date')
 const statusText= document.querySelector('p.weather-status')
 const tempText = document.querySelector('h1.tempurature')
 const realFealText = document.querySelector('p.real-feal')
-const windHumTest = document.querySelector('p.wind-humidity')
-
+const windHumText = document.querySelector('p.wind-humidity')
 
 
 // On page load get the users location and populate the text elements.

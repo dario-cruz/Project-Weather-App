@@ -6,8 +6,20 @@ async function getWeatherData(locationString) {
     const weatherData = await apiResponse.json()
     console.log(weatherData)
     // Return object data. 
-    return weatherData
+    return {
+        name : weatherData.location.name,
+        region : weatherData.location.region,
+        status : weatherData.current.condition.text,
+        date : weatherData.location.localtime,
+        tempF : weatherData.current.temp_f,
+        tempC : weatherData.current.temp_c,
+        realFeelF : weatherData.current.feelslike_f,
+        realFeelC : weatherData.current.feelslike_C,
+        windDir : weatherData.current.wind_dir,
+        windMph : weatherData.current.wind_mph,
+        windKph : weatherData.current.wind_kph,
+        humidity : weatherData.current.humidity,
+    }
 }
-
 
 export { getWeatherData }
