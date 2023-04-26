@@ -13,6 +13,3 @@ const windHumTest = document.querySelector('p.wind-humidity')
 
 
 // On page load get the users location and populate the text elements.
-let currentLocation = getUserLocation()
-
-console.log(currentLocation)
