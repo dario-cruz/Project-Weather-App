@@ -3,8 +3,8 @@ import { weatherFormEvent } from './pageComponents/events'
 import { getUserLocation, userLoc } from './helpers/getLocation'
 import { processLocation } from './helpers/processLocation'
 
-getUserLocation()
-
+// getUserLocation()
+processLocation()
 
 // Define all elements needed. 
 // Text elements. 
