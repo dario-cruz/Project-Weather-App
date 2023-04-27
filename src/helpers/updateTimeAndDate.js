@@ -9,11 +9,17 @@ function updateTime() {
     const year = now.getFullYear().toString();
     const month = (now.getMonth() + 1).toString().padStart(2, '0');
     const day = now.getDate().toString().padStart(2, '0');
-    const dateString = `${year}-${month}-${day}`;
-  }
-  
-  // Call updateTime() every second to update the time and date
-  setInterval(updateTime, 1000);
+    const dateString = `${day}-${month}-${year}`;
 
-  
-  
+    // Return a complete string with time and date.
+    const finalString = `${dateString} ${timeString}`
+    return finalString
+}  
+
+// Create function for live updating of time.
+function liveTimeUpdate() {
+    // Call updateTime() every second to update the time and date
+    setInterval(updateTime, 1000);
+}
+
+export {updateTime, liveTimeUpdate}
