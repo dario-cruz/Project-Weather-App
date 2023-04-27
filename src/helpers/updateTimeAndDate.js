@@ -13,13 +13,19 @@ function updateTime() {
 
     // Return a complete string with time and date.
     const finalString = `${dateString} ${timeString}`
+    console.log(finalString)
     return finalString
 }  
 
+
 // Create function for live updating of time.
 function liveTimeUpdate() {
+    // Target element to update time.
+    const dateElement = document.querySelector('p.date')
+    // Run updateTime func and return string will be the innerText.
+    dateElement.innerHTML = updateTime()
     // Call updateTime() every second to update the time and date
-    setInterval(updateTime, 1000);
+    // setInterval(updateTime, 1000)
 }
 
 export {updateTime, liveTimeUpdate}

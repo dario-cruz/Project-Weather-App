@@ -2,9 +2,12 @@ import './index.css'
 import { weatherFormEvent } from './pageComponents/events'
 import { getUserLocation, userLoc } from './helpers/getLocation'
 import { processLocation } from './helpers/processLocation'
+import { liveTimeUpdate } from './helpers/updateTimeAndDate'
 
-// getUserLocation()
+// Get the users location on startup.
 processLocation()
+
+setInterval(liveTimeUpdate, 1000)
 
 // Define all elements needed. 
 // Text elements. 
