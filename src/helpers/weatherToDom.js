@@ -13,7 +13,7 @@ function weatherToDom(location, date, status, temp, realFeel, wind, humidity) {
     dateText.innerText = `${date}`
     statusText.innerText = `${status}`
     tempText.innerHTML = `${temp}&#176;`
-    realFeelText.innerHTML = `Feels like ${realFeel}&#176;`
+    realFeelText.innerHTML = `Right now it feels like ${realFeel}&#176;`
     windHumText.innerText = `Wind Speed: ${wind}MPH Humidity: ${humidity}`
 }
 

@@ -9,7 +9,19 @@
 html {
     font-size: calc(15px + 0.390625vw);
 }
+p {
+    font-family: 'roboto', sans-serif;
+}
 
+/* Custom Fonts */
+@font-face {
+    font-family: 'bruno';
+    src: url('./assets/fonts/BrunoAce-Regular.ttf');
+}
+@font-face{
+    font-family: 'roboto';
+    src: url('./assets/fonts/RobotoCondensed-Bold.ttf');
+}
 
 /* Navigation elements */
 div.side-menu {
@@ -71,6 +83,9 @@ div.temp-display{
     align-items: center;
     font-size: 10rem;
     user-select: none;
+}
+h1.temperature{
+    font-family: 'bruno', sans-serif;
 }
 div.feel-display {
     display: flex;
