@@ -1,6 +1,6 @@
 import { getWeatherData } from "../helpers/getWeatherData"
 import { weatherToDom } from "../helpers/weatherToDom"
-
+import { getForecastData } from "../helpers/getWeatherData"
 // Hold weather data from searches.
 let weatherObject = {}
 
@@ -16,15 +16,6 @@ const weatherFormEvent = (() => {
             .then(result => {
                 weatherToDom(result.region, result.date, result.status, result.tempF, result.realFeelF, result.windMph, result.humidity)
             })
-
-        // if (weatherInput.value == '') {
-        //     // Throw invalid message to the user.
-        //     weatherInput.setCustomValidity('Enter a location.')
-        // } else {
-        //     // Use the users location to get current weather and update variable. 
-        //     weatherObject = getWeatherData(weatherInput.value)
-        // }
-
     })
 })()
 
