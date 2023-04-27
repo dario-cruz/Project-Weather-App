@@ -9,11 +9,10 @@ function updateTime() {
     const year = now.getFullYear().toString();
     const month = (now.getMonth() + 1).toString().padStart(2, '0');
     const day = now.getDate().toString().padStart(2, '0');
-    const dateString = `${day}-${month}-${year}`;
+    const dateString = `${month}-${day}-${year}`;
 
     // Return a complete string with time and date.
     const finalString = `${dateString} ${timeString}`
-    console.log(finalString)
     return finalString
 }  
 

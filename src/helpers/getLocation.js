@@ -17,9 +17,6 @@ async function getUserLocation() {
   
           longitude = parseInt(longitude);
           longitude = Math.floor(longitude);
-  
-          // Log the object to check data.
-          console.log(latitude, longitude);
           
           const location = {
             latitude: latitude,
