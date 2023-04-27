@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+/* Responsive Text */
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+
+
 /* Navigation elements */
 div.side-menu {
     position: fixed;
@@ -49,6 +55,32 @@ div.search-bar {
     justify-content: center;
     align-items: center;
 }
+div.date-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.weather-status-display{
+    display: flex;
+    justify-content: center;
+}
+div.temp-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    user-select: none;
+}
+div.feel-display {
+    display: flex;
+    justify-content: center;
+}
+div.wind-humidity-display {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* Form styling. */
 form#weather-form { 
