@@ -7,8 +7,7 @@ async function getWeatherData(locationString) {
     console.log(weatherData)
     // Return object data. 
     return {
-        name : weatherData.location.name,
-        region : weatherData.location.region,
+        region : `${weatherData.location.name}, ${weatherData.location.region}`,
         status : weatherData.current.condition.text,
         date : weatherData.location.localtime,
         tempF : Math.floor(weatherData.current.temp_f),
