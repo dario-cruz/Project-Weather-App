@@ -12,17 +12,6 @@ async function processLocation() {
     const locWeather = await getWeatherData(`${locCoords.latitude},${locCoords.longitude}`)
     
     weatherToDom(locWeather.region, locWeather.date, locWeather.status, locWeather.tempF, locWeather.realFeelF, locWeather.windMph, locWeather.humidity)
-
-
-
-    // getUserLocation()
-    //     .then(result => {
-    //         console.log(result.latitude, result.longitude)
-    //         getWeatherData(`${result.latitude}`,`${result.longitude}`)
-    //             .then(result => {
-    //                 weatherToDom(result.region, result.date, result.status, result.tempF, result.realFeelF, result.windMph, result.humidity)
-    //             })
-    //     })
 }
 
 export {processLocation}
