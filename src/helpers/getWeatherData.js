@@ -18,6 +18,11 @@ async function getWeatherData(locationString) {
         windMph : Math.floor(weatherData.current.wind_mph),
         windKph : Math.floor(weatherData.current.wind_kph),
         humidity : weatherData.current.humidity,
+        moonphase : weatherData.forecast.forecastday[0].astro.moon_phase,
+        moonrise : weatherData.forecast.forecastday[0].astro.moonrise,
+        moonset : weatherData.forecast.forecastday[0].astro.moonset,
+        sunrise : weatherData.forecast.forecastday[0].astro.sunrise,
+        sunset : weatherData.forecast.forecastday[0].astro.sunset,
     }
 }
 
