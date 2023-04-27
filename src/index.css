@@ -22,9 +22,12 @@ p {
 }
 @font-face{
     font-family: 'roboto';
+    src: url('./assets/fonts/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+    font-family: 'roboto-bold';
     src: url('./assets/fonts/RobotoCondensed-Bold.ttf');
 }
-
 /* Navigation elements */
 div.side-menu {
     position: fixed;
@@ -59,6 +62,11 @@ div.top-area {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+p.location {
+    font-family: 'roboto-bold' sans-serif;
+    font-size: 1.8rem;
+    font-weight: bolder;
 }
 div.temp-display {
     grid-area: mid;
@@ -106,6 +114,18 @@ div.wind-humidity-display {
 }
 div.astro-info {
     grid-area: astro;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+    "title title title title title"
+    "sunrise sunset moonphase moonrise moonset";
+    display: grid;
+}
+div.astro-heading {
+    grid-area: title ;
+}
+div.astro-heading > p.astro-heading-text {
+    font-family: 'roboto-bold' sans-serif;
 }
 
 /* Form styling. */

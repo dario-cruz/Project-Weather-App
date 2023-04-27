@@ -7,7 +7,11 @@ const realFeelText = document.querySelector('p.real-feel')
 const windHumText = document.querySelector('p.wind-humidity')
 
 // Astro elements to be updated.
-const astroText = document.querySelector('p.astro-heading-text')
+const moonPhaseText = document.querySelector('p.moonphase-text')
+const moonRiseText = document.querySelector('p.moonrise-text')
+const moonSetText = document.querySelector('p.moonset-text')
+const sunRiseText = document.querySelector('p.sunrise-text')
+const sunSetText = document.querySelector('p.sunset-text')
 
 // Update all of the dom elements that make up the app.
 function weatherToDom(location, date, status, temp, realFeel, wind, humidity) {
@@ -23,7 +27,11 @@ function weatherToDom(location, date, status, temp, realFeel, wind, humidity) {
 // Update dom elements related to astrological data.
 function astroToDom(moonPhase, moonRise, moonSet, sunRise, sunSet) {
     // Update innerText/HTML
-
+    moonPhaseText.innerHTML = `${moonPhase}`
+    moonRiseText.innerHTML = `${moonRise}`
+    moonSetText.innerHTML = `${moonSet}`
+    sunRiseText.innerHTML = `${sunRise}`
+    sunSetText.innerHTML = `${sunSet}`
 }
 
-export {weatherToDom}
+export {weatherToDom, astroToDom}
