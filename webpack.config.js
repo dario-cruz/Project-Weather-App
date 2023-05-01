@@ -8,6 +8,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  mode: 'development',
   devServer: {
     static: {
         directory: path.join(__dirname, 'dist'),
@@ -47,4 +48,9 @@ module.exports = {
         template: './src/index.html'
       }),
   ],
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
 };
