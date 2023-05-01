@@ -3,21 +3,21 @@
 async function getImages(searchTerm) {
     const imageData = await imageSearch(searchTerm)
     const imageList =  [
-        imageData.photos[0].src.original,
-        imageData.photos[1].src.original,
-        imageData.photos[2].src.original,
-        imageData.photos[3].src.original,
-        imageData.photos[4].src.original,
-        imageData.photos[5].src.original,
-        imageData.photos[6].src.original,
-        imageData.photos[7].src.original,
-        imageData.photos[8].src.original,
-        imageData.photos[9].src.original,
-        imageData.photos[10].src.original,
-        imageData.photos[11].src.original,
-        imageData.photos[12].src.original,
-        imageData.photos[13].src.original,
-        imageData.photos[14].src.original,
+        imageData.photos[0].src.large,
+        imageData.photos[1].src.large,
+        imageData.photos[2].src.large,
+        imageData.photos[3].src.large,
+        imageData.photos[4].src.large,
+        imageData.photos[5].src.large,
+        imageData.photos[6].src.large,
+        imageData.photos[7].src.large,
+        imageData.photos[8].src.large,
+        imageData.photos[9].src.large,
+        imageData.photos[10].src.large,
+        imageData.photos[11].src.large,
+        imageData.photos[12].src.large,
+        imageData.photos[13].src.large,
+        imageData.photos[14].src.large,
     ]
 
     let randomIndex = Math.floor(Math.random() * imageList.length)
