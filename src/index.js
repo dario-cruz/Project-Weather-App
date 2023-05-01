@@ -1,14 +1,14 @@
 import './index.css'
 import { processLocation } from './helpers/processLocation'
 import { liveTimeUpdate } from './helpers/updateTimeAndDate'
-import { imageSearch } from './helpers/getBackgroundImage'
+import { getImages, imageSearch } from './helpers/getBackgroundImage'
+import { weatherFormEvent } from './pageComponents/events'
 
 // Get the users location on startup.
 processLocation()
 setInterval(liveTimeUpdate, 1000)
 
-let images = imageSearch('cloudy')
-console.log(images)
+
 // Define all elements needed. 
 // Text elements. 
 const locationText = document.querySelector('p.location')
