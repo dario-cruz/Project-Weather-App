@@ -37,8 +37,9 @@ async function imageSearch(searchTerm) {
 }
 
 function updateBackground(imgString) {
+    const backgroundElement = document.querySelector('div.background-image')
     // Update css prop for element.
-    document.body.style.backgroundImage = `url('${imgString}')`
+    backgroundElement.style.backgroundImage = `url('${imgString}')`
 }
 
 function weatherStatus(searchTerm) {
@@ -47,11 +48,19 @@ function weatherStatus(searchTerm) {
             getImages('clouds')
             break
         case 'Sunny':
-            getImages('Sunshine')
+            getImages('sunrise')
             break
-        
-        
-
+        case 'Light Rain':
+            getImages('rain')
+            break
+        case 'rain':
+            getImages('rain')
+            break
+        case 'mist':
+            getImages('fog')
+            break
+        case 'thunderstorm':
+            getImages('thunder')
     }
 }
 
