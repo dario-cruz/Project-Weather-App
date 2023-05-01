@@ -1,5 +1,4 @@
 // Search for image based on term provided.
-
 async function getImages(searchTerm) {
     const imageData = await imageSearch(searchTerm)
     const imageList =  [
@@ -26,13 +25,14 @@ async function getImages(searchTerm) {
 }
 
 async function imageSearch(searchTerm) {
+    // Fetch images from pexels api.
     const apiResponse = await fetch(`https://api.pexels.com/v1/search?query=${searchTerm}`, {
         headers: {
             Authorization: 'VhTnt4oP6hpy8kAUcQUkFSUNm4yiIqyZ2qNbY3Gzo8EwgU872H4PbcMX'
         }
     }, {mode : 'cors'})
     const imageData = await apiResponse.json()
-    
+    // Return the data.
     return imageData
 }
 
@@ -42,6 +42,7 @@ function updateBackground(imgString) {
     backgroundElement.style.backgroundImage = `url('${imgString}')`
 }
 
+// Logic to steer image api in the right direction.
 function weatherStatus(searchTerm) {
     switch (searchTerm) {
         case 'Partly Cloudy':
@@ -63,7 +64,5 @@ function weatherStatus(searchTerm) {
             getImages('thunder')
     }
 }
-
-
 
 export {getImages, updateBackground}
