@@ -1,6 +1,7 @@
 import { getWeatherData } from "../helpers/getWeatherData"
 import { weatherToDom } from "../helpers/weatherToDom"
-import { getForecastData } from "../helpers/getWeatherData"
+import { imageSearch } from "../helpers/getBackgroundImage"
+
 // Hold weather data from searches.
 let weatherObject = {}
 
@@ -15,6 +16,9 @@ const weatherFormEvent = (() => {
         getWeatherData(weatherInput.value)
             .then(result => {
                 weatherToDom(result.region, result.date, result.status, result.tempF, result.realFeelF, result.windMph, result.humidity)
+            })
+            .then(result => {
+                imageSearch(result.status)
             })
     })
 })()
