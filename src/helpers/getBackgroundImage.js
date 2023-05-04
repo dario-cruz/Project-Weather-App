@@ -37,9 +37,10 @@ async function imageSearch(searchTerm) {
 }
 
 function updateBackground(imgString) {
-    const backgroundElement = document.querySelector('div.background-image')
+    const backgroundElement = document.querySelector('.background-image')
     // Update css prop for element.
     backgroundElement.style.backgroundImage = `url('${imgString}')`
+    backgroundElement.style.backdropFilter = 'blur(5px)'
 }
 
 // Logic to steer image api in the right direction.
