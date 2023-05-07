@@ -250,6 +250,10 @@ div.astro-moonphase, div.astro-moonrise, div.astro-moonset, div.astro-sunrise, d
     justify-content: center;
     align-items: center;
 }
+p.moonphase-text, p.moonrise-text, p.moonset-text, p.sunrise-text, p.sunset-text {
+    font-size: small;
+    font-family: 'bruno';
+}
 div.astro-moonphase {
     grid-area: moonphase;
 }
@@ -269,4 +273,18 @@ img.astro-icon {
     fill: rgb(255, 255, 255);
     width: 30px;
     height: 30px;
+}
+
+/* Weather related classes */
+.sunny-background {
+    background: rgb(232,67,12);
+    background: linear-gradient(157deg, rgba(232,67,12,1) 0%, rgba(255,252,0,1) 100%);
+}
+.rainy-background {
+    background: rgb(2,88,91);
+    background: linear-gradient(135deg, rgba(2,88,91,1) 0%, rgba(100,190,215,1) 48%, rgba(166,181,176,1) 100%);
+}
+.cloudy-background {
+    background: rgb(230,236,236);
+    background: linear-gradient(353deg, rgba(230,236,236,1) 0%, rgba(115,122,124,1) 68%, rgba(81,91,88,1) 100%);
 }
