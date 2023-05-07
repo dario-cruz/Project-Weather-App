@@ -245,6 +245,10 @@ div.astro-moonphase, div.astro-moonrise, div.astro-moonset, div.astro-sunrise, d
     background-color: black; 
     color: white;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 div.astro-moonphase {
     grid-area: moonphase;
@@ -260,4 +264,9 @@ div.astro-sunrise {
 }
 div.astro-sunset {
     grid-area: sunset;
+}
+img.astro-icon {
+    fill: rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
 }

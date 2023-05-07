@@ -25,6 +25,8 @@ const weatherFormEvent = (() => {
     })
 })()
 
+// Create a func that can be called on button click.
+// Func should get the users location.
 const getLocationEvent = (() => {
     const geoLocationDiv = document.querySelector('div.geo-location')
 
@@ -33,5 +35,6 @@ const getLocationEvent = (() => {
         processLocation()
     })
 })()
+
 
 export { weatherFormEvent, weatherObject, getLocationEvent }
