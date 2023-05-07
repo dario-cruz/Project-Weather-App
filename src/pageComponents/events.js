@@ -1,6 +1,7 @@
 import { getImages } from "../helpers/getBackgroundImage"
 import { getWeatherData } from "../helpers/getWeatherData"
 import { weatherToDom } from "../helpers/weatherToDom"
+import { processLocation } from "../helpers/processLocation"
 
 // Hold weather data from searches.
 let weatherObject = {}
@@ -21,5 +22,13 @@ const weatherFormEvent = (() => {
     })
 })()
 
+const getLocationEvent = (() => {
+    const geoLocationDiv = document.querySelector('div.geo-location')
 
-export { weatherFormEvent, weatherObject }
+    geoLocationDiv.addEventListener('click', (e) => {
+        e.preventDefault()
+        processLocation()
+    })
+})()
+
+export { weatherFormEvent, weatherObject, getLocationEvent }

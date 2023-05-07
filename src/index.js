@@ -1,6 +1,7 @@
 import './index.css'
 import { processLocation } from './helpers/processLocation'
 import { liveTimeUpdate } from './helpers/updateTimeAndDate'
+import { getLocationEvent } from './pageComponents/events'
 import { getImages, imageSearch } from './helpers/getBackgroundImage'
 import { weatherFormEvent } from './pageComponents/events'
 
