@@ -173,6 +173,26 @@ button#location-submit{
 button#location-submit:hover {
     opacity: 1;
 }
+div.geo-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 2px solid black;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+div.geo-location:hover {
+    background-color: gray;
+}
+div.geo-location > img {
+    height: 24px;
+    width: 24px;
+}
+
 
 
 /* Weather Classes */
