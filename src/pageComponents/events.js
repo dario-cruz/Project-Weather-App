@@ -1,6 +1,6 @@
 import { getImages } from "../helpers/getBackgroundImage"
 import { getWeatherData } from "../helpers/getWeatherData"
-import { weatherToDom } from "../helpers/weatherToDom"
+import { weatherToDom, astroToDom} from "../helpers/weatherToDom"
 import { processLocation } from "../helpers/processLocation"
 
 // Hold weather data from searches.
@@ -16,7 +16,10 @@ const weatherFormEvent = (() => {
         e.preventDefault()
         getWeatherData(weatherInput.value)
             .then(result => {
+                // Update Weather elements
                 weatherToDom(result.region, result.date, result.status, result.tempF, result.realFeelF, result.windMph, result.humidity)
+                // Update Astro elements
+                astroToDom(result.moonphase, result.moonrise, result.moonset, result.sunrise, result.sunset)
                 getImages(result.status)
             })
     })

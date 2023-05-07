@@ -243,7 +243,7 @@ p.astro-heading-text {
 }
 div.astro-moonphase, div.astro-moonrise, div.astro-moonset, div.astro-sunrise, div.astro-sunset {
     background-color: black; 
-    color: transparent;
+    color: white;
     border-radius: 5px;
 }
 div.astro-moonphase {
