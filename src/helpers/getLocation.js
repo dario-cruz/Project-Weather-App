@@ -1,6 +1,6 @@
 // Get user location for checking local weather on startup.
 async function getUserLocation() {
-    return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
       let longitude = '';
       let latitude = '';
       // Check if the browser supports geolocation
@@ -33,7 +33,7 @@ async function getUserLocation() {
         console.log("Geolocation is not supported by this browser.");
         reject("Geolocation is not supported by this browser.");
       }
-    });
-  }
+  });
+}
 
 export {getUserLocation}
