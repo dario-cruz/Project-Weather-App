@@ -1,6 +1,6 @@
 import { getUserLocation } from "./getLocation";
 import { getWeatherData } from "./getWeatherData";
-import { weatherToDom } from "./weatherToDom";
+import { weatherToDom, astroToDom } from "./weatherToDom";
 
 async function processLocation() {
     // Get the users current location.
@@ -10,6 +10,7 @@ async function processLocation() {
     const locWeather = await getWeatherData(`${locCoords.latitude},${locCoords.longitude}`)
     
     weatherToDom(locWeather.region, locWeather.date, locWeather.status, locWeather.tempF, locWeather.realFeelF, locWeather.windMph, locWeather.humidity)
+    astroToDom(locWeather.moonphase, locWeather.moonrise, locWeather.moonset, locWeather.sunrise, locWeather.sunset)
 }
 
 export {processLocation}
