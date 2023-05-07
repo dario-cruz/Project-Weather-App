@@ -134,23 +134,7 @@ div.wind-humidity-display {
     display: flex;
     justify-content: center;
 }
-div.astro-info {
-    grid-area: astro;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 50px 1fr;
-    grid-template-areas: 
-    "title title title title title"
-    "sunrise sunset moonphase moonrise moonset";
-    display: grid;
-}
-div.astro-heading {
-    grid-area: title;
-    display: flex;
-    align-items: center;
-}
-p.astro-heading-text {
-    font-family: 'roboto-bold' sans-serif;
-}
+
 
 /* Form styling. */
 form#weather-form { 
@@ -206,7 +190,6 @@ button#location-submit:hover {
 }
 
 /* Animations */
-
 @keyframes temp-animation {
     0% {
         transform: scale(1);
@@ -217,4 +200,44 @@ button#location-submit:hover {
     100% {
         transform: scale(1);
     }
+}
+
+/* Astrological Elements */
+div.astro-info {
+    grid-area: astro;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+    "title title title title title"
+    "sunrise sunset moonphase moonrise moonset";
+    display: grid;
+    gap: 1px;
+}
+div.astro-heading {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+}
+p.astro-heading-text {
+    font-family: 'roboto-bold' sans-serif;
+}
+div.astro-moonphase, div.astro-moonrise, div.astro-moonset, div.astro-sunrise, div.astro-sunset {
+    background-color: black; 
+    color: transparent;
+    border-radius: 5px;
+}
+div.astro-moonphase {
+    grid-area: moonphase;
+}
+div.astro-moonrise {
+    grid-area: moonrise;
+}
+div.astro-moonset {
+    grid-area: moonset;
+}
+div.astro-sunrise {
+    grid-area: sunrise;
+}
+div.astro-sunset {
+    grid-area: sunset;
 }
