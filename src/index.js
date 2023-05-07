@@ -7,6 +7,7 @@ import { weatherFormEvent } from './pageComponents/events'
 
 // Get the users location on startup.
 processLocation()
+liveTimeUpdate()
 setInterval(liveTimeUpdate, 1000)
 
 

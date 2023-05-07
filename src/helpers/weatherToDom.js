@@ -17,7 +17,7 @@ const sunSetText = document.querySelector('p.sunset-text')
 function weatherToDom(location, date, status, temp, realFeel, wind, humidity) {
     // Update all dom elements with weatherData.
     locationText.innerText = `${location}`
-    dateText.innerText = `${date}`
+    // dateText.innerText = `${date}`
     statusText.innerText = `${status}`
     tempText.innerHTML = `${temp}&#176;`
     realFeelText.innerHTML = `Right now it feels like ${realFeel}&#176;`
