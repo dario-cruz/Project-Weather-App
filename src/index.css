@@ -251,7 +251,7 @@ div.astro-moonphase, div.astro-moonrise, div.astro-moonset, div.astro-sunrise, d
     align-items: center;
 }
 p.moonphase-text, p.moonrise-text, p.moonset-text, p.sunrise-text, p.sunset-text {
-    font-size: small;
+    font-size: .7rem;
     font-family: 'bruno';
 }
 div.astro-moonphase {
