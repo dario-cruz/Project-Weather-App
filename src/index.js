@@ -20,6 +20,3 @@ const statusText= document.querySelector('p.weather-status')
 const tempText = document.querySelector('h1.tempurature')
 const realFealText = document.querySelector('p.real-feal')
 const windHumText = document.querySelector('p.wind-humidity')
-
-
-// On page load get the users location and populate the text elements.

@@ -14,6 +14,12 @@ p {
     font-family: 'roboto', sans-serif;
     font-size: 1.2rem;
 }
+
+/* Set Transition smoothly */
+body {
+    transition: background 1s ease-in-out;
+}
+
 /* Image background */
 div.background-image {
     position: absolute;
