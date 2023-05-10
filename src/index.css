@@ -193,22 +193,6 @@ div.geo-location > img {
     width: 24px;
 }
 
-
-
-/* Weather Classes */
-.sunny {
-    background-color: #fab802;
-}
-.cloudy {
-    background-color: #c8d5db;
-}
-.overcast {
-    background-color: #dae0e3;
-}
-.rain {
-    background-color: #30dcf2;
-}
-
 /* Animations */
 @keyframes temp-animation {
     0% {
