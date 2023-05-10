@@ -1,11 +1,14 @@
 import './index.css'
 import { processLocation } from './helpers/processLocation'
 import { liveTimeUpdate } from './helpers/updateTimeAndDate'
+// Import all event funcs that are IFEE's
 import { getLocationEvent, weatherFormEvent, resetInput } from './pageComponents/events'
 
 // Get the users location on startup.
 processLocation()
+// Update the time
 liveTimeUpdate()
+// Constantly update time to give "live" effect.
 setInterval(liveTimeUpdate, 1000)
 
 
