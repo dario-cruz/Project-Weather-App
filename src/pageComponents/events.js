@@ -29,12 +29,21 @@ const weatherFormEvent = (() => {
 // Func should get the users location.
 const getLocationEvent = (() => {
     const geoLocationDiv = document.querySelector('div.geo-location')
-
     geoLocationDiv.addEventListener('click', (e) => {
         e.preventDefault()
         processLocation()
     })
 })()
 
+// Create a func that adds and event so that when the user clicks the weather input,
+// It resets the contents of the input element. 
+const resetInput = (() => {
+    const inputElement = document.querySelector('input#location-input')
+    inputElement.addEventListener('click', () => {
+        // Reset input field.
+        inputElement.value = ''
+    })
+})()
 
-export { weatherFormEvent, weatherObject, getLocationEvent }
+
+export { weatherFormEvent, weatherObject, getLocationEvent, resetInput }
