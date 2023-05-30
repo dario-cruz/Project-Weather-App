@@ -4,10 +4,12 @@
   "description": "Weather App that makes use of APIs, JavaScript Promises, Async funcs, and Awaits.",
   "main": "dist/index",
   "typings": "dist/index",
+  "homepage": "https://dario-cruz.github.io/Project-Weather-App",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "serve": "webpack-dev-server --open --port 0"
+    "serve": "webpack-dev-server --open --port 0",
+    "deploy": "webpack && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "devDependencies": {
     "@dariocru/attribute-helper": "^0.0.2",
     "css-loader": "^6.7.3",
+    "gh-pages": "^5.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
     "style-loader": "^3.3.2",
